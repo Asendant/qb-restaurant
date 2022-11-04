@@ -1,0 +1,95 @@
+#orders__container {
+    text-align: center;
+
+    width: 900px;
+    height: 700px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -450px;
+    margin-top: -350px;
+    border: 3px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(102, 102, 102);
+    color: white;
+}
+
+#orders__list {
+    height: 80%;
+    width: 90%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+
+    background: rgb(24, 2, 121);
+}
+
+#orders__list ul li {
+    display: inline-block;
+    max-height: 150px;
+    min-height: 150px;
+    text-align: center;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 10px;
+
+    background: rgb(93, 53, 238);
+    overflow-y: hidden;
+}
+
+#exit, #exitRecipe {
+    position: absolute;
+    color: black;
+    right: 30px;
+    top: 30px;
+    color: red;
+    font-size: 25px;
+}
+
+.recipe__container {
+    display: absolute;
+    width: 300px;
+    height: 500px;
+    background: rgb(24, 2, 121);
+    border: 5px solid black;
+    color: white;
+    text-align: center;
+    list-style-position: inside;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -250px;
+}
+
+#recipe__list {
+    list-style-position: inside;
+    position: inline-block;
+}
+
+.recipe__item {
+    color: white;
+    font-size: 30px; 
+    font-weight: bold;
+    transform: translateX(-30px);
+}
+
+/* .recipe__item::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f111";
+    left: 100px;
+} */
+
+/* ul {
+    list-style-type: none;
+    list-style: none;
+} */

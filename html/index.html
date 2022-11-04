@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="https://kit.fontawesome.com/79c8fdb514.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="orders__container">
+        <i class="fa-solid fa-x" id="exit" onclick="closeMenu()"></i>
+        <h1>Orders</h1>
+        <div id="orders__list">
+            <ul id="orders__list__item">
+            </ul>
+        </div>
+
+        <h3>Left Click: Open Recipe | Right Click: Complete Order</h3>
+    </div>
+
+    <div class="recipe__container">
+        <i class="fa-solid fa-x" id="exitRecipe"></i>
+        <h1>Recipe</h1>
+        <div id="recipe__list">
+            <ul id="recipe__list__item">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
