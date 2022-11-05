@@ -1,0 +1,21 @@
+Hello!
+
+To install this resource, it's pretty simple, just go ahead and drag the resource into your resources folder and start it via your server.cfg just like any other resource.
+
+As for creating new items and recipes, it looks complicated, but it's quite simple. First, you go into the server.cfg and scroll down to the Config.Items table. From there, you're going to add a new object {} and follow the previous path. You are going to set the name, the price, and make a recipe object. You are then going to put the different items that are going to be needed to create this item (remember the spelling as it is going to come up later). After completing the recipe, finish off the object with the appropriate commas, then scroll down to Config.ItemNames. In that table, there is going to be two sets of items, the top one is the name of the object that is being used for the name of the order. For example, in Config.Items, the name would be name = "Pizza" or something like that. That name goes into the top part of the table and just follow the examples that are already there. The left side is the name that you used in the order, and the right side is the name of the item in the shared Items.lua folder with QBCore. The bottom table is the recipe's part. The left side is the item name used in the recipe tables and the right side is the name of items the shared items.lua file. Hopefully this helps creating new recipes.
+
+As for actually adding the items, you are going to want to go into your qb-core>shared folder and go to items.lua. In here, you are going to want to scroll to the appropriate section, or make a new section for this script alone and follow the format that is already being used by the originally included items with QB. The default example items will be listed below if you want to use those.
+
+['chicken'] = {['name'] = 'chicken', ['label'] = 'Chicken', ['weight'] = 0, ['type'] = 'item', ['image'] = 'chicken.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'A piece of chicken.'},
+['bread'] = {['name'] = 'bread', ['label'] = 'Bread', ['weight'] = 0, ['type'] = 'item', ['image'] = 'bread.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'A slice of bread.'},
+['meat'] = {['name'] = 'meat', ['label'] = 'Meat', ['weight'] = 0, ['type'] = 'item', ['image'] = 'meat.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'A slice of meat.'},
+['lettuce'] = {['name'] = 'lettuce', ['label'] = 'Lettuce', ['weight'] = 0, ['type'] = 'item', ['image'] = 'lettuce.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Lettuce'},
+['tomato'] = {['name'] = 'tomato', ['label'] = 'Tomato', ['weight'] = 0, ['type'] = 'item', ['image'] = 'tomato.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Tomato"},
+['onion'] = {['name'] = 'onion', ['label'] = 'Onion', ['weight'] = 0, ['type'] = 'item', ['image'] = 'onion.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Onion"},
+['cheese'] = {['name'] = 'cheese', ['label'] = 'Cheese', ['weight'] = 0, ['type'] = 'item', ['image'] = 'cheese.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Cheese"},
+['pepperoni'] = {['name'] = 'pepperoni', ['label'] = 'Pepperoni', ['weight'] = 0, ['type'] = 'item', ['image'] = 'pepperoni.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Pepperoni"},
+['hotdog'] = {['name'] = 'hotdog', ['label'] = 'Hotdog', ['weight'] = 0, ['type'] = 'item', ['image'] = 'hotdog.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Hotdog"},
+
+To add the custom inventory images, you are going to want to go into your inventory script and go to their images folder (typically inside their html folder) and just paste in those images. Then, you are just going to include the names into the the table in items.lua as you did before.
+
+Hopefully this helps with using this script!
