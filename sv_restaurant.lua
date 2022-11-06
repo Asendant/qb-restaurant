@@ -6,6 +6,8 @@ RegisterNetEvent('qb-restaurant:server:removeItem', function(name, amount)
 
     if PlayerData ~= nil then
         PlayerData.Functions.RemoveItem(name, amount) 
+
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[name], "remove")
     end
 end)
 
