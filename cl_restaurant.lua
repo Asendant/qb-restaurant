@@ -133,8 +133,13 @@ RegisterNUICallback("completeOrder", function(data)
     end
 
     for k, v in pairs(recipe) do
+        TriggerServerEvent('qb-restaurant:server:removeItem', k, v)
+    end
+
+    for k, v in pairs(recipe) do
         TriggerServerEvent('qb-restaurant:server:completeOrder', k, v)
     end
+
     TriggerEvent('QBCore:Notify', "You have completed order " .. tostring(data.orderNumber) .. ".")
     pay += math.random(Config.MinPayout, Config.MaxPayout);
 
